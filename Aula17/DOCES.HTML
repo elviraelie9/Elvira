@@ -1,0 +1,1936 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Doces | O Cantinho da Dadiva</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+
+    <style>
+
+        /* =====================================================
+           CONFIGURAÇÕES GERAIS
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #fffaf7;
+            color: #603943;
+        }
+
+        :root {
+
+            --rosa: #f47c98;
+            --rosa-dark: #d94e70;
+            --rosa-light: #ffe0e8;
+
+            --amarelo: #ffc857;
+            --amarelo-light: #fff0c8;
+
+            --laranja: #ff836d;
+
+            --vinho: #702d3d;
+
+            --creme: #fff8ed;
+
+            --texto: #705861;
+
+            --branco: #ffffff;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        header {
+
+            min-height: 80px;
+
+            padding: 15px 7%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            background: rgba(255, 250, 247, 0.97);
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            box-shadow:
+                0 4px 20px rgba(112, 45, 61, 0.08);
+        }
+
+
+        /* LOGO */
+
+        .logo {
+
+            display: flex;
+
+            flex-direction: column;
+
+            line-height: 1;
+        }
+
+        .logo span {
+
+            color: var(--rosa);
+
+            font-family: "Pacifico", cursive;
+
+            font-size: 22px;
+        }
+
+        .logo strong {
+
+            color: var(--vinho);
+
+            font-size: 17px;
+        }
+
+
+        /* MENU */
+
+        nav {
+
+            display: flex;
+
+            gap: 28px;
+        }
+
+        nav a {
+
+            color: var(--vinho);
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+
+            color: var(--rosa);
+        }
+
+
+        /* BOTÃO */
+
+        .btn {
+
+            display: inline-block;
+
+            padding: 14px 25px;
+
+            background: var(--rosa);
+
+            color: white;
+
+            border-radius: 30px;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            border: none;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+
+            background: var(--rosa-dark);
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =====================================================
+           HERO DOS DOCES
+        ===================================================== */
+
+        .hero-doces {
+
+            min-height: 470px;
+
+            padding: 70px 8%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 50px;
+
+            background:
+
+                radial-gradient(
+                    circle at 90% 20%,
+                    #ffd3df,
+                    transparent 35%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #fffaf7,
+                    #fff0e8
+                );
+
+            overflow: hidden;
+        }
+
+
+        .hero-content {
+
+            width: 52%;
+        }
+
+
+        .mini-title {
+
+            display: inline-block;
+
+            padding: 9px 18px;
+
+            background: var(--amarelo-light);
+
+            color: #85611e;
+
+            border-radius: 30px;
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+        }
+
+
+        .hero-content h1 {
+
+            color: var(--vinho);
+
+            font-size: clamp(45px, 6vw, 70px);
+
+            line-height: 1.1;
+
+            margin: 20px 0;
+        }
+
+
+        .hero-content h1 span {
+
+            color: var(--rosa);
+
+            font-family: "Pacifico", cursive;
+
+            font-weight: 400;
+        }
+
+
+        .hero-content p {
+
+            max-width: 570px;
+
+            color: var(--texto);
+
+            line-height: 1.8;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* IMAGEM DO HERO */
+
+        .hero-image {
+
+            width: 43%;
+
+            height: 360px;
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+        }
+
+
+        .hero-image::before {
+
+            content: "";
+
+            width: 330px;
+
+            height: 330px;
+
+            position: absolute;
+
+            border-radius: 50%;
+
+            background: var(--rosa-light);
+        }
+
+
+        .hero-image img {
+
+            width: 310px;
+
+            height: 310px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border: 9px solid white;
+
+            position: relative;
+
+            box-shadow:
+                0 20px 45px rgba(112,45,61,.18);
+        }
+
+
+        /* =====================================================
+           CATEGORIAS
+        ===================================================== */
+
+        .categories {
+
+            padding: 35px 8%;
+
+            background: white;
+
+            border-bottom: 1px solid #f5e5e7;
+        }
+
+
+        .category-list {
+
+            max-width: 900px;
+
+            margin: auto;
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .category {
+
+            padding: 11px 22px;
+
+            border-radius: 30px;
+
+            background: #fff0f3;
+
+            color: var(--vinho);
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+            transition: .3s;
+        }
+
+
+        .category:hover,
+        .category.active {
+
+            background: var(--rosa);
+
+            color: white;
+        }
+
+
+        /* =====================================================
+           TÍTULO DA SECÇÃO
+        ===================================================== */
+
+        .section-title {
+
+            max-width: 700px;
+
+            margin: auto;
+
+            text-align: center;
+
+            padding-bottom: 50px;
+        }
+
+
+        .section-title span {
+
+            color: var(--rosa-dark);
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+        }
+
+
+        .section-title h2 {
+
+            color: var(--vinho);
+
+            font-size: 42px;
+
+            margin: 12px 0;
+        }
+
+
+        .section-title h2 strong {
+
+            color: var(--rosa);
+
+            font-family: "Pacifico", cursive;
+
+            font-weight: 400;
+        }
+
+
+        .section-title p {
+
+            color: var(--texto);
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           CATÁLOGO
+        ===================================================== */
+
+        .catalogo {
+
+            padding: 90px 8%;
+
+            background: #fff7f8;
+        }
+
+
+        .produtos {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 28px;
+        }
+
+
+        /* =====================================================
+           CARTÃO
+        ===================================================== */
+
+        .produto {
+
+            background: white;
+
+            border-radius: 24px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 10px 30px rgba(112,45,61,.07);
+
+            transition: .35s;
+        }
+
+
+        .produto:hover {
+
+            transform: translateY(-10px);
+
+            box-shadow:
+                0 20px 45px rgba(112,45,61,.14);
+        }
+
+
+        .produto-imagem {
+
+            height: 250px;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .produto-imagem img {
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: .5s;
+        }
+
+
+        .produto:hover .produto-imagem img {
+
+            transform: scale(1.08);
+        }
+
+
+        .etiqueta {
+
+            position: absolute;
+
+            top: 15px;
+
+            left: 15px;
+
+            padding: 7px 13px;
+
+            background: var(--rosa);
+
+            color: white;
+
+            border-radius: 20px;
+
+            font-size: 9px;
+
+            font-weight: 700;
+        }
+
+
+        .etiqueta.amarela {
+
+            background: var(--amarelo);
+
+            color: var(--vinho);
+        }
+
+
+        .etiqueta.laranja {
+
+            background: var(--laranja);
+        }
+
+
+        .produto-info {
+
+            padding: 22px;
+        }
+
+
+        .produto-info h3 {
+
+            color: var(--vinho);
+
+            font-size: 18px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .produto-info p {
+
+            color: #80666d;
+
+            font-size: 11px;
+
+            line-height: 1.7;
+
+            min-height: 55px;
+        }
+
+
+        .produto-bottom {
+
+            margin-top: 18px;
+
+            padding-top: 15px;
+
+            border-top: 1px solid #f0e2e4;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+
+        .preco {
+
+            color: var(--rosa-dark);
+
+            font-size: 17px;
+
+            font-weight: 800;
+        }
+
+
+        .pedir {
+
+            padding: 9px 15px;
+
+            background: var(--rosa-light);
+
+            color: var(--rosa-dark);
+
+            border-radius: 20px;
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            transition: .3s;
+        }
+
+
+        .pedir:hover {
+
+            background: var(--rosa);
+
+            color: white;
+        }
+
+
+        /* =====================================================
+           SECÇÃO DE BOLOS
+        ===================================================== */
+
+        .bolos {
+
+            padding: 90px 8%;
+
+            background: white;
+        }
+
+
+        .bolo-content {
+
+            max-width: 1150px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 60px;
+
+            align-items: center;
+        }
+
+
+        .bolo-image {
+
+            position: relative;
+        }
+
+
+        .bolo-image img {
+
+            height: 450px;
+
+            object-fit: cover;
+
+            border-radius: 30px;
+
+            box-shadow:
+                20px 20px 0 var(--rosa-light);
+        }
+
+
+        .bolo-text span {
+
+            color: var(--rosa-dark);
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+        }
+
+
+        .bolo-text h2 {
+
+            color: var(--vinho);
+
+            font-size: 42px;
+
+            line-height: 1.2;
+
+            margin: 15px 0;
+        }
+
+
+        .bolo-text h2 strong {
+
+            color: var(--rosa);
+
+            font-family: "Pacifico", cursive;
+
+            font-weight: 400;
+
+            display: block;
+        }
+
+
+        .bolo-text p {
+
+            color: var(--texto);
+
+            line-height: 1.8;
+
+            margin-bottom: 20px;
+        }
+
+
+        .lista {
+
+            list-style: none;
+
+            margin-bottom: 25px;
+        }
+
+
+        .lista li {
+
+            color: var(--vinho);
+
+            font-size: 12px;
+
+            margin-bottom: 12px;
+        }
+
+
+        /* =====================================================
+           ENCOMENDA
+        ===================================================== */
+
+        .encomenda {
+
+            padding: 90px 8%;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    #702d3d,
+                    #d94e70
+                );
+
+            color: white;
+
+            text-align: center;
+        }
+
+
+        .encomenda h2 {
+
+            font-size: 42px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .encomenda h2 span {
+
+            display: block;
+
+            color: var(--amarelo);
+
+            font-family: "Pacifico", cursive;
+
+            font-weight: 400;
+        }
+
+
+        .encomenda p {
+
+            max-width: 600px;
+
+            margin: 0 auto 28px;
+
+            color: #ffe7ed;
+
+            line-height: 1.8;
+
+            font-size: 13px;
+        }
+
+
+        .btn-branco {
+
+            display: inline-block;
+
+            padding: 15px 27px;
+
+            background: white;
+
+            color: var(--vinho);
+
+            border-radius: 30px;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            transition: .3s;
+        }
+
+
+        .btn-branco:hover {
+
+            background: var(--amarelo);
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            padding: 55px 8% 25px;
+
+            background: #421c28;
+
+            color: white;
+
+            text-align: center;
+        }
+
+
+        .footer-logo {
+
+            display: flex;
+
+            flex-direction: column;
+
+            line-height: 1;
+
+            margin-bottom: 15px;
+        }
+
+
+        .footer-logo span {
+
+            color: var(--rosa);
+
+            font-family: "Pacifico", cursive;
+
+            font-size: 22px;
+        }
+
+
+        .footer-logo strong {
+
+            font-size: 17px;
+        }
+
+
+        footer p {
+
+            color: #d9bec5;
+
+            font-size: 11px;
+
+            margin-bottom: 22px;
+        }
+
+
+        .social {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 25px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .social a {
+
+            color: #ffd0d9;
+
+            font-size: 11px;
+
+            transition: .3s;
+        }
+
+
+        .social a:hover {
+
+            color: white;
+        }
+
+
+        footer small {
+
+            color: #a98c95;
+
+            font-size: 9px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVIDADE
+        ===================================================== */
+
+        @media (max-width: 950px) {
+
+            header {
+
+                gap: 20px;
+            }
+
+            header > .btn {
+
+                display: none;
+            }
+
+            nav {
+
+                gap: 13px;
+            }
+
+
+            .hero-doces {
+
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+
+            .hero-content {
+
+                width: 100%;
+            }
+
+
+            .hero-content p {
+
+                margin-left: auto;
+
+                margin-right: auto;
+            }
+
+
+            .hero-image {
+
+                width: 100%;
+            }
+
+
+            .produtos {
+
+                grid-template-columns: 1fr 1fr;
+            }
+
+
+            .bolo-content {
+
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            header {
+
+                flex-direction: column;
+
+                padding: 18px 5%;
+
+                gap: 15px;
+            }
+
+
+            nav {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+
+            nav a {
+
+                font-size: 10px;
+            }
+
+
+            .hero-doces {
+
+                padding: 60px 5%;
+            }
+
+
+            .hero-content h1 {
+
+                font-size: 45px;
+            }
+
+
+            .hero-image {
+
+                height: 330px;
+            }
+
+
+            .hero-image::before {
+
+                width: 270px;
+
+                height: 270px;
+            }
+
+
+            .hero-image img {
+
+                width: 250px;
+
+                height: 250px;
+            }
+
+
+            .catalogo,
+            .bolos {
+
+                padding: 70px 5%;
+            }
+
+
+            .section-title h2 {
+
+                font-size: 34px;
+            }
+
+
+            .produtos {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .produto-imagem {
+
+                height: 270px;
+            }
+
+
+            .bolo-image img {
+
+                height: 330px;
+            }
+
+
+            .bolo-text h2 {
+
+                font-size: 34px;
+            }
+
+
+            .encomenda {
+
+                padding: 70px 5%;
+            }
+
+
+            .encomenda h2 {
+
+                font-size: 34px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     CABEÇALHO
+===================================================== -->
+
+<header>
+
+    <div class="logo">
+
+        <span>
+            O Cantinho
+        </span>
+
+        <strong>
+            da Dadiva
+        </strong>
+
+    </div>
+
+
+    <nav>
+
+        <a href="../Aula17/index.html">
+            Início
+        </a>
+
+        <a href="..//Aula17/DOCES.HTML">
+            Doces
+        </a>
+
+        <a href="..//Aula17/SALGADOS.HTML">
+            Salgados
+        </a>
+        <a href="../Aula17/bebidas.html"> BEBIDAS</a>
+
+        <a href="..//Aula17/SOBRE.HTML">
+            Sobre
+        </a>
+
+        <a href="..//Aula17/CONTATO.HTML">
+            Contacto
+        </a>
+
+    </nav>
+
+
+    <a href="index.html#contacto" class="btn">
+        Fazer Pedido
+    </a>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero-doces">
+
+
+    <div class="hero-content">
+
+        <span class="mini-title">
+            🍰 O NOSSO CANTINHO MAIS DOCE
+        </span>
+
+
+        <h1>
+
+            Um mundo de
+
+            <span>
+                doces!
+            </span>
+
+        </h1>
+
+
+        <p>
+
+            Descubra as nossas deliciosas sobremesas,
+            preparadas com ingredientes selecionados
+            e muito carinho. Cada doce é feito para
+            transformar o seu momento numa experiência
+            inesquecível.
+
+        </p>
+
+
+        <a href="#catalogo" class="btn">
+
+            🍰 Ver todos os doces
+
+        </a>
+
+    </div>
+
+
+
+    <div class="hero-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=90"
+            alt="Delicioso bolo de chocolate"
+        >
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     CATEGORIAS
+===================================================== -->
+
+<section class="categories">
+
+    <div class="category-list">
+
+        <a href="#bolos" class="category active">
+            🎂 Bolos
+        </a>
+
+        <a href="#catalogo" class="category">
+            🧁 Cupcakes
+        </a>
+
+        <a href="#catalogo" class="category">
+            🍩 Donuts
+        </a>
+
+        <a href="#catalogo" class="category">
+            🍪 Bolachas
+        </a>
+
+        <a href="#catalogo" class="category">
+            🍫 Chocolates
+        </a>
+
+        <a href="#catalogo" class="category">
+            🎉 Festas
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CATÁLOGO
+===================================================== -->
+
+<section class="catalogo" id="catalogo">
+
+
+    <div class="section-title">
+
+        <span>
+            🍭 ESCOLHA A SUA DELÍCIA
+        </span>
+
+
+        <h2>
+
+            Os nossos
+
+            <strong>
+                doces
+            </strong>
+
+        </h2>
+
+
+        <p>
+
+            Temos opções deliciosas para aniversários,
+            festas, encontros especiais ou simplesmente
+            para adoçar o seu dia.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="produtos">
+
+
+        <!-- PRODUTO 1 -->
+
+        <article class="produto">
+
+            <div class="produto-imagem">
+
+                <img
+                    src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=90"
+                    alt="Bolo de chocolate"
+                >
+
+                <span class="etiqueta">
+                    Mais vendido
+                </span>
+
+            </div>
+
+
+            <div class="produto-info">
+
+                <h3>
+                    Bolo de Chocolate
+                </h3>
+
+                <p>
+                    Bolo fofinho de chocolate
+                    com uma deliciosa cobertura
+                    cremosa.
+                </p>
+
+
+                <div class="produto-bottom">
+
+                    <span class="preco">
+                        2.500 Kz
+                    </span>
+
+                    <a href="index.html#contacto"
+                       class="pedir">
+
+                        Pedir agora →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRODUTO 2 -->
+
+        <article class="produto">
+
+            <div class="produto-imagem">
+
+                <img
+                    src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=90"
+                    alt="Donuts coloridos"
+                >
+
+                <span class="etiqueta amarela">
+                    Favorito
+                </span>
+
+            </div>
+
+
+            <div class="produto-info">
+
+                <h3>
+                    Donuts Coloridos
+                </h3>
+
+                <p>
+                    Donuts fofinhos com
+                    coberturas coloridas
+                    e muito sabor.
+                </p>
+
+
+                <div class="produto-bottom">
+
+                    <span class="preco">
+                        1.500 Kz
+                    </span>
+
+                    <a href="index.html#contacto"
+                       class="pedir">
+
+                        Pedir agora →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRODUTO 3 -->
+
+        <article class="produto">
+
+            <div class="produto-imagem">
+
+                <img
+                    src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=800&q=90"
+                    alt="Cupcakes decorados"
+                >
+
+            </div>
+
+
+            <div class="produto-info">
+
+                <h3>
+                    Cupcakes Decorados
+                </h3>
+
+                <p>
+                    Pequenos bolinhos fofinhos
+                    decorados para deixar
+                    qualquer ocasião especial.
+                </p>
+
+
+                <div class="produto-bottom">
+
+                    <span class="preco">
+                        1.500 Kz
+                    </span>
+
+                    <a href="index.html#contacto"
+                       class="pedir">
+
+                        Pedir agora →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRODUTO 4 -->
+
+        <article class="produto">
+
+            <div class="produto-imagem">
+
+                <img
+                    src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=90"
+                    alt="Bolachas"
+                >
+
+            </div>
+
+
+            <div class="produto-info">
+
+                <h3>
+                    Bolachas Artesanais
+                </h3>
+
+                <p>
+                    Bolachas crocantes e
+                    saborosas preparadas
+                    de forma artesanal.
+                </p>
+
+
+                <div class="produto-bottom">
+
+                    <span class="preco">
+                        1.200 Kz
+                    </span>
+
+                    <a href="index.html#contacto"
+                       class="pedir">
+
+                        Pedir agora →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRODUTO 5 -->
+
+        <article class="produto">
+
+            <div class="produto-imagem">
+
+                <img
+                    src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=90"
+                    alt="Brownie de chocolate"
+                >
+
+                <span class="etiqueta laranja">
+                    Novo
+                </span>
+
+            </div>
+
+
+            <div class="produto-info">
+
+                <h3>
+                    Brownie de Chocolate
+                </h3>
+
+                <p>
+                    Brownie húmido e intenso,
+                    perfeito para os amantes
+                    de chocolate.
+                </p>
+
+
+                <div class="produto-bottom">
+
+                    <span class="preco">
+                        1.800 Kz
+                    </span>
+
+                    <a href="index.html#contacto"
+                       class="pedir">
+
+                        Pedir agora →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRODUTO 6 -->
+
+        <article class="produto">
+
+            <div class="produto-imagem">
+
+                <img
+                    src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=800&q=90"
+                    alt="Bolo de morango"
+                >
+
+                <span class="etiqueta">
+                    Especial
+                </span>
+
+            </div>
+
+
+            <div class="produto-info">
+
+                <h3>
+                    Bolo de Morango
+                </h3>
+
+                <p>
+                    Massa leve com creme
+                    e morangos frescos.
+                </p>
+
+
+                <div class="produto-bottom">
+
+                    <span class="preco">
+                        3.000 Kz
+                    </span>
+
+                    <a href="index.html#contacto"
+                       class="pedir">
+
+                        Pedir agora →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRODUTO 7 -->
+
+        <article class="produto">
+
+            <div class="produto-imagem">
+
+                <img
+                    src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=800&q=90"
+                    alt="Torta doce"
+                >
+
+            </div>
+
+
+            <div class="produto-info">
+
+                <h3>
+                    Torta Especial
+                </h3>
+
+                <p>
+                    Torta cremosa preparada
+                    com uma receita especial
+                    da casa.
+                </p>
+
+
+                <div class="produto-bottom">
+
+                    <span class="preco">
+                        2.800 Kz
+                    </span>
+
+                    <a href="index.html#contacto"
+                       class="pedir">
+
+                        Pedir agora →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRODUTO 8 -->
+
+        <article class="produto">
+
+            <div class="produto-imagem">
+
+                <img
+                    src="https://images.unsplash.com/photo-1603532648955-039310d9ed75?auto=format&fit=crop&w=800&q=90"
+                    alt="Macarons"
+                >
+
+                <span class="etiqueta amarela">
+                    Delicado
+                </span>
+
+            </div>
+
+
+            <div class="produto-info">
+
+                <h3>
+                    Macarons
+                </h3>
+
+                <p>
+                    Pequenos macarons coloridos
+                    com recheios cremosos.
+                </p>
+
+
+                <div class="produto-bottom">
+
+                    <span class="preco">
+                        2.500 Kz
+                    </span>
+
+                    <a href="index.html#contacto"
+                       class="pedir">
+
+                        Pedir agora →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRODUTO 9 -->
+
+        <article class="produto">
+
+            <div class="produto-imagem">
+
+                <img
+                    src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=800&q=90"
+                    alt="Cheesecake"
+                >
+
+            </div>
+
+
+            <div class="produto-info">
+
+                <h3>
+                    Cheesecake
+                </h3>
+
+                <p>
+                    Cheesecake cremoso com
+                    uma deliciosa cobertura
+                    de frutas.
+                </p>
+
+
+                <div class="produto-bottom">
+
+                    <span class="preco">
+                        3.000 Kz
+                    </span>
+
+                    <a href="index.html#contacto"
+                       class="pedir">
+
+                        Pedir agora →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BOLOS PERSONALIZADOS
+===================================================== -->
+
+<section class="bolos" id="bolos">
+
+
+    <div class="bolo-content">
+
+
+        <div class="bolo-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1558636508-e0db3814bd1d?auto=format&fit=crop&w=1000&q=90"
+                alt="Bolo personalizado"
+            >
+
+        </div>
+
+
+
+        <div class="bolo-text">
+
+            <span>
+                🎂 BOLOS PERSONALIZADOS
+            </span>
+
+
+            <h2>
+
+                O seu bolo,
+
+                <strong>
+                    do seu jeito!
+                </strong>
+
+            </h2>
+
+
+            <p>
+
+                Tem uma festa especial?
+                Criamos bolos personalizados
+                para aniversários, casamentos,
+                batizados e outras ocasiões.
+
+            </p>
+
+
+            <ul class="lista">
+
+                <li>
+                    ❤️ Escolha o sabor
+                </li>
+
+                <li>
+                    🎨 Escolha a decoração
+                </li>
+
+                <li>
+                    🎂 Escolha o tamanho
+                </li>
+
+                <li>
+                    ✨ Personalize como quiser
+                </li>
+
+            </ul>
+
+
+            <a href="index.html#contacto" class="btn">
+
+                Quero encomendar 🎂
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ENCOMENDA
+===================================================== -->
+
+<section class="encomenda">
+
+    <h2>
+
+        Ficou com vontade?
+
+        <span>
+            Faça já a sua encomenda!
+        </span>
+
+    </h2>
+
+
+    <p>
+
+        Escolha os seus doces favoritos
+        e entre em contacto connosco.
+        Teremos muito prazer em preparar
+        algo especial para si.
+
+    </p>
+
+
+    <a href="index.html#contacto"
+       class="btn-branco">
+
+        ❤️ Fazer Encomenda
+
+    </a>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+
+    <div class="footer-logo">
+
+        <span>
+            O Cantinho
+        </span>
+
+        <strong>
+            da Dadiva
+        </strong>
+
+    </div>
+
+
+    <p>
+        Doces, salgados e momentos felizes. ❤️
+    </p>
+
+
+    <div class="social">
+
+        <a href="#">
+            Instagram
+        </a>
+
+        <a href="#">
+            Facebook
+        </a>
+
+        <a href="#">
+            WhatsApp
+        </a>
+
+    </div>
+
+
+    <small>
+        © 2026 O Cantinho da Dadiva — Todos os direitos reservados.
+    </small>
+    <small>
+        <P>Feito por: ELVIRA ELIE</P>
+    <p>Contato:922773376</p> 
+    </small>
+
+
+</footer>
+
+
+</body>
+</html>

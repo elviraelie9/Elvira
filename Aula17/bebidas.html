@@ -1,0 +1,2018 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bebidas | O Cantinho da Dadiva</title>
+
+    <!-- =====================================================
+         FONTES
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+
+    <style>
+
+        /* =====================================================
+           CONFIGURAÇÕES GERAIS
+        ====================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #fffaf7;
+            color: #603943;
+        }
+
+        :root {
+
+            --rosa: #f47c98;
+            --rosa-dark: #d94e70;
+            --rosa-light: #ffe0e8;
+
+            --laranja: #ff836d;
+            --laranja-light: #ffe1d9;
+
+            --amarelo: #ffc857;
+            --amarelo-light: #fff0c8;
+
+            --verde: #75b798;
+            --verde-light: #def3e8;
+
+            --azul: #70b7d9;
+            --azul-light: #dff4ff;
+
+            --vinho: #702d3d;
+            --vinho-dark: #421c28;
+
+            --texto: #705861;
+
+            --branco: #ffffff;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ====================================================== */
+
+        header {
+
+            min-height: 80px;
+
+            padding: 15px 7%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            background: rgba(255, 250, 247, 0.97);
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            box-shadow:
+                0 4px 20px rgba(112, 45, 61, 0.08);
+        }
+
+
+        .logo {
+
+            display: flex;
+
+            flex-direction: column;
+
+            line-height: 1;
+        }
+
+
+        .logo span {
+
+            color: var(--rosa);
+
+            font-family: "Pacifico", cursive;
+
+            font-size: 22px;
+        }
+
+
+        .logo strong {
+
+            color: var(--vinho);
+
+            font-size: 17px;
+        }
+
+
+        nav {
+
+            display: flex;
+
+            gap: 25px;
+        }
+
+
+        nav a {
+
+            color: var(--vinho);
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+
+        nav a:hover {
+
+            color: var(--rosa);
+        }
+
+
+        nav a.active {
+
+            color: var(--rosa);
+        }
+
+
+        /* =====================================================
+           BOTÕES
+        ====================================================== */
+
+        .btn {
+
+            display: inline-block;
+
+            padding: 14px 25px;
+
+            background: var(--rosa);
+
+            color: white;
+
+            border-radius: 30px;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            transition: .3s;
+        }
+
+
+        .btn:hover {
+
+            background: var(--rosa-dark);
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =====================================================
+           HERO
+        ====================================================== */
+
+        .hero {
+
+            min-height: 500px;
+
+            padding: 70px 8%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 50px;
+
+            background:
+
+                radial-gradient(
+                    circle at 90% 15%,
+                    #dff4ff,
+                    transparent 35%
+                ),
+
+                radial-gradient(
+                    circle at 10% 90%,
+                    #fff0c8,
+                    transparent 30%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #fffaf7,
+                    #fff0e8
+                );
+        }
+
+
+        .hero-text {
+
+            width: 52%;
+        }
+
+
+        .mini-title {
+
+            display: inline-block;
+
+            padding: 9px 18px;
+
+            background: var(--azul-light);
+
+            color: #397d9d;
+
+            border-radius: 30px;
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+        }
+
+
+        .hero h1 {
+
+            color: var(--vinho);
+
+            font-size: clamp(45px, 6vw, 70px);
+
+            line-height: 1.1;
+
+            margin: 20px 0;
+        }
+
+
+        .hero h1 span {
+
+            color: var(--azul);
+
+            font-family: "Pacifico", cursive;
+
+            font-weight: 400;
+        }
+
+
+        .hero p {
+
+            max-width: 570px;
+
+            color: var(--texto);
+
+            font-size: 13px;
+
+            line-height: 1.8;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* =====================================================
+           IMAGEM HERO
+        ====================================================== */
+
+        .hero-image {
+
+            width: 43%;
+
+            height: 390px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            position: relative;
+        }
+
+
+        .hero-image::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 340px;
+
+            height: 340px;
+
+            background: var(--azul-light);
+
+            border-radius: 50%;
+        }
+
+
+        .hero-image img {
+
+            width: 315px;
+
+            height: 315px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border: 9px solid white;
+
+            position: relative;
+
+            box-shadow:
+                0 20px 50px rgba(70,120,140,.18);
+        }
+
+
+        /* =====================================================
+           TÍTULO DAS SECÇÕES
+        ====================================================== */
+
+        .section-title {
+
+            max-width: 700px;
+
+            margin: auto;
+
+            text-align: center;
+
+            padding-bottom: 50px;
+        }
+
+
+        .section-title > span {
+
+            color: var(--rosa-dark);
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+        }
+
+
+        .section-title h2 {
+
+            color: var(--vinho);
+
+            font-size: 42px;
+
+            margin: 12px 0;
+        }
+
+
+        .section-title h2 strong {
+
+            color: var(--azul);
+
+            font-family: "Pacifico", cursive;
+
+            font-weight: 400;
+        }
+
+
+        .section-title p {
+
+            color: var(--texto);
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           CATEGORIAS
+        ====================================================== */
+
+        .categorias {
+
+            padding: 90px 8%;
+
+            background: white;
+        }
+
+
+        .categoria-grid {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .categoria {
+
+            padding: 30px 20px;
+
+            text-align: center;
+
+            border-radius: 25px;
+
+            transition: .3s;
+        }
+
+
+        .categoria:hover {
+
+            transform: translateY(-7px);
+        }
+
+
+        .categoria:nth-child(1) {
+
+            background: #fff0f3;
+        }
+
+
+        .categoria:nth-child(2) {
+
+            background: #fff7df;
+        }
+
+
+        .categoria:nth-child(3) {
+
+            background: #e9f8ff;
+        }
+
+
+        .categoria:nth-child(4) {
+
+            background: #eaf8ef;
+        }
+
+
+        .categoria-icon {
+
+            font-size: 40px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .categoria h3 {
+
+            color: var(--vinho);
+
+            font-size: 15px;
+
+            margin-bottom: 7px;
+        }
+
+
+        .categoria p {
+
+            color: var(--texto);
+
+            font-size: 10px;
+
+            line-height: 1.6;
+        }
+
+
+        /* =====================================================
+           PRODUTOS
+        ====================================================== */
+
+        .bebidas {
+
+            padding: 100px 8%;
+
+            background: #fff9f7;
+        }
+
+
+        .produtos {
+
+            max-width: 1150px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 28px;
+        }
+
+
+        .produto {
+
+            background: white;
+
+            border-radius: 25px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 10px 30px rgba(112,45,61,.07);
+
+            transition: .3s;
+
+            position: relative;
+        }
+
+
+        .produto:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 18px 40px rgba(112,45,61,.12);
+        }
+
+
+        .produto-img {
+
+            height: 245px;
+
+            overflow: hidden;
+
+            position: relative;
+        }
+
+
+        .produto-img img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: .5s;
+        }
+
+
+        .produto:hover .produto-img img {
+
+            transform: scale(1.07);
+        }
+
+
+        .tag {
+
+            position: absolute;
+
+            top: 15px;
+
+            left: 15px;
+
+            padding: 7px 12px;
+
+            border-radius: 20px;
+
+            background: var(--rosa);
+
+            color: white;
+
+            font-size: 9px;
+
+            font-weight: 700;
+        }
+
+
+        .produto-info {
+
+            padding: 22px;
+        }
+
+
+        .produto-info h3 {
+
+            color: var(--vinho);
+
+            font-size: 18px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .produto-info p {
+
+            color: var(--texto);
+
+            font-size: 11px;
+
+            line-height: 1.7;
+
+            min-height: 40px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .produto-bottom {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+
+        .preco {
+
+            color: var(--rosa-dark);
+
+            font-size: 18px;
+
+            font-weight: 800;
+        }
+
+
+        .pedir {
+
+            padding: 9px 16px;
+
+            background: var(--rosa-light);
+
+            color: var(--rosa-dark);
+
+            border-radius: 20px;
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+            transition: .3s;
+        }
+
+
+        .pedir:hover {
+
+            background: var(--rosa);
+
+            color: white;
+        }
+
+
+        /* =====================================================
+           BEBIDAS NATURAIS
+        ====================================================== */
+
+        .naturais {
+
+            padding: 100px 8%;
+
+            background: white;
+        }
+
+
+        .naturais-grid {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 50px;
+
+            align-items: center;
+        }
+
+
+        .naturais-image {
+
+            position: relative;
+        }
+
+
+        .naturais-image img {
+
+            height: 450px;
+
+            object-fit: cover;
+
+            border-radius: 30px;
+
+            box-shadow:
+                20px 20px 0 var(--azul-light);
+        }
+
+
+        .naturais-text > span {
+
+            color: var(--azul);
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+        }
+
+
+        .naturais-text h2 {
+
+            color: var(--vinho);
+
+            font-size: 40px;
+
+            line-height: 1.2;
+
+            margin: 15px 0;
+        }
+
+
+        .naturais-text h2 strong {
+
+            display: block;
+
+            color: var(--azul);
+
+            font-family: "Pacifico", cursive;
+
+            font-weight: 400;
+        }
+
+
+        .naturais-text p {
+
+            color: var(--texto);
+
+            font-size: 12px;
+
+            line-height: 1.8;
+
+            margin-bottom: 25px;
+        }
+
+
+        .lista {
+
+            list-style: none;
+        }
+
+
+        .lista li {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin-bottom: 14px;
+
+            color: var(--vinho);
+
+            font-size: 11px;
+
+            font-weight: 600;
+        }
+
+
+        .check {
+
+            width: 28px;
+
+            height: 28px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: var(--verde-light);
+
+            color: var(--verde);
+
+            border-radius: 50%;
+        }
+
+
+        /* =====================================================
+           PROMOÇÃO
+        ====================================================== */
+
+        .promocao {
+
+            padding: 70px 8%;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    #70b7d9,
+                    #75b798
+                );
+
+            text-align: center;
+
+            color: white;
+        }
+
+
+        .promocao h2 {
+
+            font-size: 38px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .promocao h2 span {
+
+            color: var(--amarelo);
+
+            font-family: "Pacifico", cursive;
+
+            font-weight: 400;
+        }
+
+
+        .promocao p {
+
+            max-width: 600px;
+
+            margin: auto auto 25px;
+
+            color: #f0ffff;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+        }
+
+
+        .btn-branco {
+
+            display: inline-block;
+
+            padding: 15px 28px;
+
+            background: white;
+
+            color: var(--vinho);
+
+            border-radius: 30px;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            transition: .3s;
+        }
+
+
+        .btn-branco:hover {
+
+            background: var(--amarelo);
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        footer {
+
+            padding: 55px 8% 25px;
+
+            background: var(--vinho-dark);
+
+            color: white;
+
+            text-align: center;
+        }
+
+
+        .footer-logo {
+
+            display: flex;
+
+            flex-direction: column;
+
+            line-height: 1;
+
+            margin-bottom: 15px;
+        }
+
+
+        .footer-logo span {
+
+            color: var(--rosa);
+
+            font-family: "Pacifico", cursive;
+
+            font-size: 22px;
+        }
+
+
+        .footer-logo strong {
+
+            font-size: 17px;
+        }
+
+
+        footer p {
+
+            color: #d9bec5;
+
+            font-size: 11px;
+
+            margin-bottom: 22px;
+        }
+
+
+        .social {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 25px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .social a {
+
+            color: #ffd0d9;
+
+            font-size: 11px;
+
+            transition: .3s;
+        }
+
+
+        .social a:hover {
+
+            color: white;
+        }
+
+
+        footer small {
+
+            color: #a98c95;
+
+            font-size: 9px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVIDADE
+        ====================================================== */
+
+        @media (max-width: 950px) {
+
+            header > .btn {
+
+                display: none;
+            }
+
+
+            nav {
+
+                gap: 13px;
+            }
+
+
+            .hero {
+
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+
+            .hero-text {
+
+                width: 100%;
+            }
+
+
+            .hero p {
+
+                margin-left: auto;
+
+                margin-right: auto;
+            }
+
+
+            .hero-image {
+
+                width: 100%;
+            }
+
+
+            .categoria-grid {
+
+                grid-template-columns: 1fr 1fr;
+            }
+
+
+            .produtos {
+
+                grid-template-columns: 1fr 1fr;
+            }
+
+
+            .naturais-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            header {
+
+                flex-direction: column;
+
+                padding: 18px 5%;
+
+                gap: 15px;
+            }
+
+
+            nav {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+
+            nav a {
+
+                font-size: 10px;
+            }
+
+
+            .hero {
+
+                padding: 60px 5%;
+            }
+
+
+            .hero h1 {
+
+                font-size: 45px;
+            }
+
+
+            .hero-image {
+
+                height: 300px;
+            }
+
+
+            .hero-image::before {
+
+                width: 260px;
+
+                height: 260px;
+            }
+
+
+            .hero-image img {
+
+                width: 240px;
+
+                height: 240px;
+            }
+
+
+            .categorias,
+            .bebidas,
+            .naturais {
+
+                padding: 70px 5%;
+            }
+
+
+            .section-title h2 {
+
+                font-size: 34px;
+            }
+
+
+            .categoria-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .produtos {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .naturais-text h2 {
+
+                font-size: 34px;
+            }
+
+
+            .naturais-image img {
+
+                height: 330px;
+            }
+
+
+            .promocao {
+
+                padding: 70px 5%;
+            }
+
+
+            .promocao h2 {
+
+                font-size: 32px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+
+    <div class="logo">
+
+        <span>
+            O Cantinho
+        </span>
+
+        <strong>
+            da Dadiva
+        </strong>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            Início
+        </a>
+
+        <a href="doces.html">
+            Doces
+        </a>
+
+        <a href="salgados.html">
+            Salgados
+        </a>
+
+        <a href="bebidas.html" class="active">
+            Bebidas
+        </a>
+
+        <a href="sobre.html">
+            Sobre
+        </a>
+
+        <a href="contacto.html">
+            Contacto
+        </a>
+
+    </nav>
+
+
+    <a href="contacto.html"
+       class="btn">
+
+        Fazer Pedido
+
+    </a>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+
+    <div class="hero-text">
+
+
+        <span class="mini-title">
+            🥤 BEBIDAS DO CANTINHO
+        </span>
+
+
+        <h1>
+
+            Refresque o seu
+
+            <span>
+                momento!
+            </span>
+
+        </h1>
+
+
+        <p>
+
+            Descubra as nossas bebidas deliciosas,
+            preparadas para acompanhar os seus
+            doces, salgados e momentos especiais.
+
+        </p>
+
+
+        <a href="#bebidas"
+           class="btn">
+
+            Ver bebidas 🥤
+
+        </a>
+
+    </div>
+
+
+
+    <div class="hero-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=900&q=90"
+            alt="Bebidas coloridas"
+        >
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     CATEGORIAS
+===================================================== -->
+
+<section class="categorias">
+
+
+    <div class="section-title">
+
+        <span>
+            🥤 ESCOLHA A SUA BEBIDA
+        </span>
+
+
+        <h2>
+
+            Temos opções para
+
+            <strong>
+                todos os gostos!
+            </strong>
+
+        </h2>
+
+
+        <p>
+
+            Bebidas frescas e saborosas
+            para acompanhar cada momento.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="categoria-grid">
+
+
+        <div class="categoria">
+
+            <div class="categoria-icon">
+                🍓
+            </div>
+
+            <h3>
+                Sumos Naturais
+            </h3>
+
+            <p>
+                Frutas frescas transformadas
+                em bebidas deliciosas.
+            </p>
+
+        </div>
+
+
+
+        <div class="categoria">
+
+            <div class="categoria-icon">
+                🥤
+            </div>
+
+            <h3>
+                Refrigerantes
+            </h3>
+
+            <p>
+                Bebidas geladas para
+                acompanhar a sua refeição.
+            </p>
+
+        </div>
+
+
+
+        <div class="categoria">
+
+            <div class="categoria-icon">
+                🍋
+            </div>
+
+            <h3>
+                Limonadas
+            </h3>
+
+            <p>
+                Refrescantes, leves e
+                cheias de sabor.
+            </p>
+
+        </div>
+
+
+
+        <div class="categoria">
+
+            <div class="categoria-icon">
+                ☕
+            </div>
+
+            <h3>
+                Cafés
+            </h3>
+
+            <p>
+                Uma opção especial para
+                os amantes de café.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PRODUTOS
+===================================================== -->
+
+<section class="bebidas"
+         id="bebidas">
+
+
+    <div class="section-title">
+
+        <span>
+            ⭐ MAIS PEDIDAS
+        </span>
+
+
+        <h2>
+
+            As nossas
+
+            <strong>
+                bebidas
+            </strong>
+
+        </h2>
+
+
+        <p>
+
+            Escolha a sua favorita e
+            deixe o seu pedido ainda
+            mais especial.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="produtos">
+
+
+        <!-- SUMO DE MORANGO -->
+
+        <article class="produto">
+
+
+            <div class="produto-img">
+
+                <img
+                    src="https://images.unsplash.com/photo-1553530666-ba11a7da3888?auto=format&fit=crop&w=800&q=90"
+                    alt="Sumo de morango"
+                >
+
+                <span class="tag">
+                    MAIS PEDIDO
+                </span>
+
+            </div>
+
+
+            <div class="produto-info">
+
+                <h3>
+                    Sumo de Morango
+                </h3>
+
+
+                <p>
+                    Morangos frescos, sabor
+                    natural e muito refrescante.
+                </p>
+
+
+                <div class="produto-bottom">
+
+                    <span class="preco">
+                        1.500 Kz
+                    </span>
+
+
+                    <a href="contacto.html"
+                       class="pedir">
+
+                        Pedir
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- SUMO DE LARANJA -->
+
+        <article class="produto">
+
+
+            <div class="produto-img">
+
+                <img
+                    src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=800&q=90"
+                    alt="Sumo de laranja"
+                >
+
+                <span class="tag">
+                    NATURAL
+                </span>
+
+            </div>
+
+
+            <div class="produto-info">
+
+                <h3>
+                    Sumo de Laranja
+                </h3>
+
+
+                <p>
+                    Laranja fresca e sabor
+                    cítrico para refrescar o dia.
+                </p>
+
+
+                <div class="produto-bottom">
+
+                    <span class="preco">
+                        1.500 Kz
+                    </span>
+
+
+                    <a href="contacto.html"
+                       class="pedir">
+
+                        Pedir
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- LIMONADA -->
+
+        <article class="produto">
+
+
+            <div class="produto-img">
+
+                <img
+                    src="https://images.unsplash.com/photo-1523677011781-c91d1bbe2f3e?auto=format&fit=crop&w=800&q=90"
+                    alt="Limonada"
+                >
+
+                <span class="tag">
+                    REFRESCANTE
+                </span>
+
+            </div>
+
+
+            <div class="produto-info">
+
+                <h3>
+                    Limonada
+                </h3>
+
+
+                <p>
+                    Limão, água e um toque
+                    especial para refrescar.
+                </p>
+
+
+                <div class="produto-bottom">
+
+                    <span class="preco">
+                        1.200 Kz
+                    </span>
+
+
+                    <a href="contacto.html"
+                       class="pedir">
+
+                        Pedir
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- SUMO DE ANANÁS -->
+
+        <article class="produto">
+
+
+            <div class="produto-img">
+
+                <img
+                    src="https://images.unsplash.com/photo-1546549032-9571cd6b27df?auto=format&fit=crop&w=800&q=90"
+                    alt="Sumo de ananás"
+                >
+
+                <span class="tag">
+                    NATURAL
+                </span>
+
+            </div>
+
+
+            <div class="produto-info">
+
+                <h3>
+                    Sumo de Ananás
+                </h3>
+
+
+                <p>
+                    Ananás fresco com um sabor
+                    tropical e delicioso.
+                </p>
+
+
+                <div class="produto-bottom">
+
+                    <span class="preco">
+                        1.500 Kz
+                    </span>
+
+
+                    <a href="contacto.html"
+                       class="pedir">
+
+                        Pedir
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- COCKTAIL SEM ÁLCOOL -->
+
+        <article class="produto">
+
+
+            <div class="produto-img">
+
+                <img
+                    src="https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?auto=format&fit=crop&w=800&q=90"
+                    alt="Cocktail sem álcool"
+                >
+
+                <span class="tag">
+                    ESPECIAL
+                </span>
+
+            </div>
+
+
+            <div class="produto-info">
+
+                <h3>
+                    Cocktail Tropical
+                </h3>
+
+
+                <p>
+                    Uma mistura colorida de
+                    frutas e sabores tropicais.
+                </p>
+
+
+                <div class="produto-bottom">
+
+                    <span class="preco">
+                        2.000 Kz
+                    </span>
+
+
+                    <a href="contacto.html"
+                       class="pedir">
+
+                        Pedir
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- CAFÉ -->
+
+        <article class="produto">
+
+
+            <div class="produto-img">
+
+                <img
+                    src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=90"
+                    alt="Café"
+                >
+
+                <span class="tag">
+                    QUENTE
+                </span>
+
+            </div>
+
+
+            <div class="produto-info">
+
+                <h3>
+                    Café Especial
+                </h3>
+
+
+                <p>
+                    Café aromático para começar
+                    ou terminar o seu momento.
+                </p>
+
+
+                <div class="produto-bottom">
+
+                    <span class="preco">
+                        1.000 Kz
+                    </span>
+
+
+                    <a href="contacto.html"
+                       class="pedir">
+
+                        Pedir
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BEBIDAS NATURAIS
+===================================================== -->
+
+<section class="naturais">
+
+
+    <div class="naturais-grid">
+
+
+        <div class="naturais-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1622597467836-f3285f2131b8?auto=format&fit=crop&w=1000&q=90"
+                alt="Bebidas naturais de frutas"
+            >
+
+        </div>
+
+
+
+        <div class="naturais-text">
+
+
+            <span>
+                🍓 FEITO COM FRUTAS
+            </span>
+
+
+            <h2>
+
+                Sabor natural
+
+                <strong>
+                    em cada copo!
+                </strong>
+
+            </h2>
+
+
+            <p>
+
+                Os nossos sumos são uma excelente
+                opção para quem procura uma bebida
+                saborosa e refrescante para acompanhar
+                os produtos do Cantinho da Dadiva.
+
+            </p>
+
+
+            <ul class="lista">
+
+
+                <li>
+
+                    <span class="check">
+                        ✓
+                    </span>
+
+                    Frutas selecionadas
+
+                </li>
+
+
+                <li>
+
+                    <span class="check">
+                        ✓
+                    </span>
+
+                    Preparados na hora
+
+                </li>
+
+
+                <li>
+
+                    <span class="check">
+                        ✓
+                    </span>
+
+                    Sabor fresco e natural
+
+                </li>
+
+
+                <li>
+
+                    <span class="check">
+                        ✓
+                    </span>
+
+                    Opções para todos os gostos
+
+                </li>
+
+
+            </ul>
+
+
+            <br>
+
+
+            <a href="contacto.html"
+               class="btn">
+
+                Fazer encomenda
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROMOÇÃO
+===================================================== -->
+
+<section class="promocao">
+
+
+    <h2>
+
+        Complete o seu pedido
+
+        <span>
+            com uma bebida! 🥤
+        </span>
+
+    </h2>
+
+
+    <p>
+
+        Escolha um dos nossos doces ou salgados
+        e acrescente uma bebida refrescante.
+        Uma combinação perfeita para qualquer
+        momento do dia!
+
+    </p>
+
+
+    <a href="contacto.html"
+       class="btn-branco">
+
+        Fazer Pedido ❤️
+
+    </a>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+
+    <div class="footer-logo">
+
+        <span>
+            O Cantinho
+        </span>
+
+        <strong>
+            da Dadiva
+        </strong>
+
+    </div>
+
+
+    <p>
+        Doces, salgados, bebidas e momentos felizes. ❤️
+    </p>
+
+
+    <div class="social">
+
+        <a href="#">
+            Instagram
+        </a>
+
+        <a href="#">
+            Facebook
+        </a>
+
+        <a href="#">
+            WhatsApp
+        </a>
+
+    </div>
+
+
+    <small>
+
+        © 2026 O Cantinho da Dadiva
+        — Todos os direitos reservados.
+
+    </small>
+    </small>
+    <P>Feito por: ELVIRA ELIE</P>
+    <p>Contato:922773376</p> 
+    </small>
+
+
+
+</footer>
+
+
+</body>
+</html>

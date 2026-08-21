@@ -1,0 +1,2019 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sobre Nós | O Cantinho da Dadiva</title>
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+
+    <style>
+
+        /* =====================================================
+           CONFIGURAÇÕES GERAIS
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: "Poppins", sans-serif;
+
+            background: #fffaf7;
+
+            color: #603943;
+        }
+
+
+        :root {
+
+            --rosa: #f47c98;
+
+            --rosa-dark: #d94e70;
+
+            --rosa-light: #ffe0e8;
+
+            --laranja: #ff836d;
+
+            --laranja-light: #ffe1d9;
+
+            --amarelo: #ffc857;
+
+            --amarelo-light: #fff0c8;
+
+            --verde: #75b798;
+
+            --verde-light: #def3e8;
+
+            --vinho: #702d3d;
+
+            --vinho-dark: #421c28;
+
+            --texto: #705861;
+
+            --branco: #ffffff;
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+
+        img {
+            width: 100%;
+
+            display: block;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        header {
+
+            min-height: 80px;
+
+            padding: 15px 7%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            background: rgba(255, 250, 247, 0.97);
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            box-shadow:
+                0 4px 20px rgba(112, 45, 61, 0.08);
+        }
+
+
+        /* LOGO */
+
+        .logo {
+
+            display: flex;
+
+            flex-direction: column;
+
+            line-height: 1;
+        }
+
+
+        .logo span {
+
+            color: var(--rosa);
+
+            font-family: "Pacifico", cursive;
+
+            font-size: 22px;
+        }
+
+
+        .logo strong {
+
+            color: var(--vinho);
+
+            font-size: 17px;
+        }
+
+
+        /* MENU */
+
+        nav {
+
+            display: flex;
+
+            gap: 28px;
+        }
+
+
+        nav a {
+
+            color: var(--vinho);
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+
+        nav a:hover {
+
+            color: var(--rosa);
+        }
+
+
+        nav a.active {
+
+            color: var(--rosa);
+        }
+
+
+        /* =====================================================
+           BOTÃO
+        ===================================================== */
+
+        .btn {
+
+            display: inline-block;
+
+            padding: 14px 25px;
+
+            background: var(--rosa);
+
+            color: white;
+
+            border-radius: 30px;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            border: none;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+
+        .btn:hover {
+
+            background: var(--rosa-dark);
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =====================================================
+           HERO SOBRE
+        ===================================================== */
+
+        .hero-sobre {
+
+            min-height: 500px;
+
+            padding: 70px 8%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 60px;
+
+            background:
+
+                radial-gradient(
+                    circle at 90% 15%,
+                    #ffd6e1,
+                    transparent 35%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #fffaf7,
+                    #fff0e8
+                );
+
+            overflow: hidden;
+        }
+
+
+        .hero-text {
+
+            width: 52%;
+        }
+
+
+        .mini-title {
+
+            display: inline-block;
+
+            padding: 9px 18px;
+
+            background: var(--amarelo-light);
+
+            color: #85611e;
+
+            border-radius: 30px;
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+        }
+
+
+        .hero-text h1 {
+
+            color: var(--vinho);
+
+            font-size: clamp(45px, 6vw, 70px);
+
+            line-height: 1.1;
+
+            margin: 20px 0;
+        }
+
+
+        .hero-text h1 span {
+
+            color: var(--rosa);
+
+            font-family: "Pacifico", cursive;
+
+            font-weight: 400;
+        }
+
+
+        .hero-text p {
+
+            max-width: 570px;
+
+            color: var(--texto);
+
+            line-height: 1.8;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* IMAGEM */
+
+        .hero-image {
+
+            width: 43%;
+
+            height: 390px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            position: relative;
+        }
+
+
+        .hero-image::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 340px;
+
+            height: 340px;
+
+            border-radius: 50%;
+
+            background: var(--rosa-light);
+        }
+
+
+        .hero-image img {
+
+            width: 315px;
+
+            height: 315px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border: 9px solid white;
+
+            position: relative;
+
+            box-shadow:
+                0 20px 50px rgba(112,45,61,.18);
+        }
+
+
+        /* =====================================================
+           HISTÓRIA
+        ===================================================== */
+
+        .historia {
+
+            padding: 100px 8%;
+
+            background: white;
+        }
+
+
+        .historia-grid {
+
+            max-width: 1150px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+
+        .historia-image {
+
+            position: relative;
+        }
+
+
+        .historia-image img {
+
+            height: 470px;
+
+            object-fit: cover;
+
+            border-radius: 30px;
+
+            box-shadow:
+                20px 20px 0 var(--rosa-light);
+        }
+
+
+        .historia-text > span {
+
+            color: var(--rosa-dark);
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+        }
+
+
+        .historia-text h2 {
+
+            color: var(--vinho);
+
+            font-size: 43px;
+
+            line-height: 1.2;
+
+            margin: 15px 0 20px;
+        }
+
+
+        .historia-text h2 strong {
+
+            display: block;
+
+            color: var(--rosa);
+
+            font-family: "Pacifico", cursive;
+
+            font-weight: 400;
+        }
+
+
+        .historia-text p {
+
+            color: var(--texto);
+
+            line-height: 1.8;
+
+            font-size: 13px;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* =====================================================
+           FRASE ESPECIAL
+        ===================================================== */
+
+        .frase {
+
+            margin-top: 30px;
+
+            padding: 20px;
+
+            background: #fff3f5;
+
+            border-left: 5px solid var(--rosa);
+
+            border-radius: 0 15px 15px 0;
+        }
+
+
+        .frase p {
+
+            color: var(--vinho);
+
+            font-family: "Pacifico", cursive;
+
+            font-size: 18px;
+
+            margin: 0;
+        }
+
+
+        /* =====================================================
+           MISSÃO / VISÃO / VALORES
+        ===================================================== */
+
+        .valores {
+
+            padding: 100px 8%;
+
+            background: #fff7f8;
+        }
+
+
+        .section-title {
+
+            max-width: 700px;
+
+            margin: auto;
+
+            text-align: center;
+
+            padding-bottom: 50px;
+        }
+
+
+        .section-title > span {
+
+            color: var(--rosa-dark);
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+        }
+
+
+        .section-title h2 {
+
+            color: var(--vinho);
+
+            font-size: 42px;
+
+            margin: 12px 0;
+        }
+
+
+        .section-title h2 strong {
+
+            color: var(--rosa);
+
+            font-family: "Pacifico", cursive;
+
+            font-weight: 400;
+        }
+
+
+        .section-title p {
+
+            color: var(--texto);
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+
+        .valor-cards {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+
+        .valor-card {
+
+            padding: 35px 25px;
+
+            background: white;
+
+            border-radius: 25px;
+
+            text-align: center;
+
+            box-shadow:
+                0 10px 30px rgba(112,45,61,.07);
+
+            transition: .3s;
+        }
+
+
+        .valor-card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 20px 40px rgba(112,45,61,.12);
+        }
+
+
+        .valor-icon {
+
+            width: 70px;
+
+            height: 70px;
+
+            margin: 0 auto 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 22px;
+
+            font-size: 30px;
+        }
+
+
+        .icon-rosa {
+
+            background: var(--rosa-light);
+        }
+
+
+        .icon-amarelo {
+
+            background: var(--amarelo-light);
+        }
+
+
+        .icon-verde {
+
+            background: var(--verde-light);
+        }
+
+
+        .valor-card h3 {
+
+            color: var(--vinho);
+
+            font-size: 18px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .valor-card p {
+
+            color: var(--texto);
+
+            font-size: 11px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           NÚMEROS
+        ===================================================== */
+
+        .numeros {
+
+            padding: 70px 8%;
+
+            background: white;
+        }
+
+
+        .numero-grid {
+
+            max-width: 1000px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 25px;
+
+            text-align: center;
+        }
+
+
+        .numero {
+
+            padding: 25px 10px;
+        }
+
+
+        .numero strong {
+
+            display: block;
+
+            color: var(--rosa);
+
+            font-size: 38px;
+
+            font-weight: 800;
+        }
+
+
+        .numero span {
+
+            color: var(--vinho);
+
+            font-size: 11px;
+
+            font-weight: 600;
+        }
+
+
+        /* =====================================================
+           QUALIDADE
+        ===================================================== */
+
+        .qualidade {
+
+            padding: 100px 8%;
+
+            background: #fff9f3;
+        }
+
+
+        .qualidade-grid {
+
+            max-width: 1150px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+
+        .qualidade-text > span {
+
+            color: var(--laranja-dark);
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+        }
+
+
+        .qualidade-text h2 {
+
+            color: var(--vinho);
+
+            font-size: 42px;
+
+            line-height: 1.2;
+
+            margin: 15px 0;
+        }
+
+
+        .qualidade-text h2 strong {
+
+            display: block;
+
+            color: var(--laranja);
+
+            font-family: "Pacifico", cursive;
+
+            font-weight: 400;
+        }
+
+
+        .qualidade-text > p {
+
+            color: var(--texto);
+
+            font-size: 13px;
+
+            line-height: 1.8;
+
+            margin-bottom: 25px;
+        }
+
+
+        .check-list {
+
+            list-style: none;
+        }
+
+
+        .check-list li {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            color: var(--vinho);
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            margin-bottom: 15px;
+        }
+
+
+        .check {
+
+            width: 30px;
+
+            height: 30px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: var(--verde-light);
+
+            color: var(--verde);
+
+            border-radius: 50%;
+
+            font-size: 13px;
+        }
+
+
+        .qualidade-image img {
+
+            height: 450px;
+
+            object-fit: cover;
+
+            border-radius: 30px;
+
+            box-shadow:
+                20px 20px 0 var(--amarelo-light);
+        }
+
+
+        /* =====================================================
+           EQUIPA
+        ===================================================== */
+
+        .equipa {
+
+            padding: 100px 8%;
+
+            background: white;
+        }
+
+
+        .equipa-grid {
+
+            max-width: 1000px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+
+        .pessoa {
+
+            text-align: center;
+
+            background: #fffaf8;
+
+            padding-bottom: 25px;
+
+            border-radius: 25px;
+
+            overflow: hidden;
+        }
+
+
+        .pessoa img {
+
+            width: 100%;
+
+            height: 280px;
+
+            object-fit: cover;
+        }
+
+
+        .pessoa h3 {
+
+            color: var(--vinho);
+
+            font-size: 17px;
+
+            margin-top: 20px;
+        }
+
+
+        .pessoa p {
+
+            color: var(--rosa-dark);
+
+            font-size: 10px;
+
+            font-weight: 600;
+
+            margin-top: 5px;
+        }
+
+
+        /* =====================================================
+           BANNER FINAL
+        ===================================================== */
+
+        .banner {
+
+            padding: 90px 8%;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    #702d3d,
+                    #d94e70
+                );
+
+            color: white;
+        }
+
+
+        .banner h2 {
+
+            font-size: 42px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .banner h2 span {
+
+            display: block;
+
+            color: var(--amarelo);
+
+            font-family: "Pacifico", cursive;
+
+            font-weight: 400;
+        }
+
+
+        .banner p {
+
+            max-width: 620px;
+
+            margin: 0 auto 28px;
+
+            color: #ffe7ed;
+
+            line-height: 1.8;
+
+            font-size: 13px;
+        }
+
+
+        .btn-branco {
+
+            display: inline-block;
+
+            padding: 15px 27px;
+
+            background: white;
+
+            color: var(--vinho);
+
+            border-radius: 30px;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            transition: .3s;
+        }
+
+
+        .btn-branco:hover {
+
+            background: var(--amarelo);
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            padding: 55px 8% 25px;
+
+            background: #421c28;
+
+            color: white;
+
+            text-align: center;
+        }
+
+
+        .footer-logo {
+
+            display: flex;
+
+            flex-direction: column;
+
+            line-height: 1;
+
+            margin-bottom: 15px;
+        }
+
+
+        .footer-logo span {
+
+            color: var(--rosa);
+
+            font-family: "Pacifico", cursive;
+
+            font-size: 22px;
+        }
+
+
+        .footer-logo strong {
+
+            font-size: 17px;
+        }
+
+
+        footer p {
+
+            color: #d9bec5;
+
+            font-size: 11px;
+
+            margin-bottom: 22px;
+        }
+
+
+        .social {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 25px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .social a {
+
+            color: #ffd0d9;
+
+            font-size: 11px;
+
+            transition: .3s;
+        }
+
+
+        .social a:hover {
+
+            color: white;
+        }
+
+
+        footer small {
+
+            color: #a98c95;
+
+            font-size: 9px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVIDADE
+        ===================================================== */
+
+        @media (max-width: 950px) {
+
+            header > .btn {
+
+                display: none;
+            }
+
+
+            nav {
+
+                gap: 13px;
+            }
+
+
+            .hero-sobre {
+
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+
+            .hero-text {
+
+                width: 100%;
+            }
+
+
+            .hero-text p {
+
+                margin-left: auto;
+
+                margin-right: auto;
+            }
+
+
+            .hero-image {
+
+                width: 100%;
+            }
+
+
+            .historia-grid,
+            .qualidade-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .valor-cards {
+
+                grid-template-columns: 1fr 1fr;
+            }
+
+
+            .equipa-grid {
+
+                grid-template-columns: 1fr 1fr;
+            }
+
+
+            .numero-grid {
+
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            header {
+
+                flex-direction: column;
+
+                padding: 18px 5%;
+
+                gap: 15px;
+            }
+
+
+            nav {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+
+            nav a {
+
+                font-size: 10px;
+            }
+
+
+            .hero-sobre {
+
+                padding: 60px 5%;
+            }
+
+
+            .hero-text h1 {
+
+                font-size: 45px;
+            }
+
+
+            .hero-image {
+
+                height: 320px;
+            }
+
+
+            .hero-image::before {
+
+                width: 270px;
+
+                height: 270px;
+            }
+
+
+            .hero-image img {
+
+                width: 250px;
+
+                height: 250px;
+            }
+
+
+            .historia,
+            .valores,
+            .qualidade,
+            .equipa {
+
+                padding: 70px 5%;
+            }
+
+
+            .historia-text h2,
+            .qualidade-text h2 {
+
+                font-size: 34px;
+            }
+
+
+            .historia-image img,
+            .qualidade-image img {
+
+                height: 330px;
+            }
+
+
+            .valor-cards {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .equipa-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .numero-grid {
+
+                grid-template-columns: 1fr 1fr;
+            }
+
+
+            .numero strong {
+
+                font-size: 30px;
+            }
+
+
+            .banner {
+
+                padding: 70px 5%;
+            }
+
+
+            .banner h2 {
+
+                font-size: 34px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+
+    <div class="logo">
+
+        <span>
+            O Cantinho
+        </span>
+
+        <strong>
+            da Dadiva
+        </strong>
+
+    </div>
+
+
+    <nav>
+
+        <a href="../Aula17/index.html">
+            Início
+        </a>
+
+        <a href="../Aula17/DOCES.HTML">
+            Doces
+        </a>
+
+        <a href="../Aula17/SALGADOS.HTML">
+            Salgados
+        </a>
+        <a href="../Aula17/bebidas.html">BEBIDAS</a>
+
+        <a href="../Aula17/SOBRE.HTML" class="active">
+            Sobre
+        </a>
+
+        <a href="../Aula17/CONTATO.HTML">
+            Contacto
+        </a>
+
+    </nav>
+
+
+    <a href="index.html#contacto" class="btn">
+        Fazer Pedido
+    </a>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero-sobre">
+
+
+    <div class="hero-text">
+
+
+        <span class="mini-title">
+            ❤️ CONHEÇA A NOSSA HISTÓRIA
+        </span>
+
+
+        <h1>
+
+            Somos o
+
+            <span>
+                Cantinho da Dadiva
+            </span>
+
+        </h1>
+
+
+        <p>
+
+            Mais do que um restaurante, somos um
+            lugar criado para partilhar sabores,
+            sorrisos e momentos especiais.
+
+        </p>
+
+
+        <a href="#historia" class="btn">
+
+            Conhecer a nossa história
+
+        </a>
+
+    </div>
+
+
+
+    <div class="hero-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=900&q=90"
+            alt="Interior acolhedor de restaurante"
+        >
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     HISTÓRIA
+===================================================== -->
+
+<section class="historia" id="historia">
+
+
+    <div class="historia-grid">
+
+
+        <div class="historia-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1000&q=90"
+                alt="Preparação de alimentos"
+            >
+
+        </div>
+
+
+
+        <div class="historia-text">
+
+
+            <span>
+                🌸 A NOSSA HISTÓRIA
+            </span>
+
+
+            <h2>
+
+                Tudo começou com
+
+                <strong>
+                    um sonho!
+                </strong>
+
+            </h2>
+
+
+            <p>
+
+                O <strong>O Cantinho da Dadiva</strong>
+                nasceu do desejo de criar um espaço
+                onde cada pessoa pudesse encontrar
+                comida saborosa e preparada com carinho.
+
+            </p>
+
+
+            <p>
+
+                Começámos com pequenas encomendas
+                de doces e salgados, sempre procurando
+                oferecer qualidade, sabor e uma
+                apresentação especial.
+
+            </p>
+
+
+            <p>
+
+                Com o passar do tempo, o nosso pequeno
+                sonho foi crescendo graças à confiança
+                e ao carinho dos nossos clientes.
+
+            </p>
+
+
+            <div class="frase">
+
+                <p>
+                    "Cada receita conta uma história,
+                    e queremos fazer parte da sua."
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MISSÃO, VISÃO E VALORES
+===================================================== -->
+
+<section class="valores">
+
+
+    <div class="section-title">
+
+        <span>
+            ✨ AQUILO EM QUE ACREDITAMOS
+        </span>
+
+
+        <h2>
+
+            Os nossos
+
+            <strong>
+                valores
+            </strong>
+
+        </h2>
+
+
+        <p>
+
+            Tudo o que fazemos é guiado por
+            princípios que colocam o cliente
+            e a qualidade em primeiro lugar.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="valor-cards">
+
+
+        <!-- MISSÃO -->
+
+        <article class="valor-card">
+
+            <div class="valor-icon icon-rosa">
+                🎯
+            </div>
+
+
+            <h3>
+                A nossa missão
+            </h3>
+
+
+            <p>
+
+                Oferecer doces e salgados
+                deliciosos, preparados com
+                carinho e ingredientes de
+                qualidade para tornar cada
+                momento mais feliz.
+
+            </p>
+
+        </article>
+
+
+
+        <!-- VISÃO -->
+
+        <article class="valor-card">
+
+            <div class="valor-icon icon-amarelo">
+                🌟
+            </div>
+
+
+            <h3>
+                A nossa visão
+            </h3>
+
+
+            <p>
+
+                Ser reconhecidos como um
+                espaço de referência em
+                sabor, qualidade e atendimento,
+                conquistando cada vez mais
+                clientes.
+
+            </p>
+
+        </article>
+
+
+
+        <!-- VALORES -->
+
+        <article class="valor-card">
+
+            <div class="valor-icon icon-verde">
+                ❤️
+            </div>
+
+
+            <h3>
+                Os nossos valores
+            </h3>
+
+
+            <p>
+
+                Trabalhamos com amor,
+                respeito, responsabilidade,
+                criatividade e compromisso
+                com a satisfação dos nossos
+                clientes.
+
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     NÚMEROS
+===================================================== -->
+
+<section class="numeros">
+
+
+    <div class="numero-grid">
+
+
+        <div class="numero">
+
+            <strong>
+                100+
+            </strong>
+
+            <span>
+                Clientes felizes
+            </span>
+
+        </div>
+
+
+        <div class="numero">
+
+            <strong>
+                20+
+            </strong>
+
+            <span>
+                Tipos de produtos
+            </span>
+
+        </div>
+
+
+        <div class="numero">
+
+            <strong>
+                100%
+            </strong>
+
+            <span>
+                Feito com carinho
+            </span>
+
+        </div>
+
+
+        <div class="numero">
+
+            <strong>
+                ❤️
+            </strong>
+
+            <span>
+                Amor pelo que fazemos
+            </span>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     QUALIDADE
+===================================================== -->
+
+<section class="qualidade">
+
+
+    <div class="qualidade-grid">
+
+
+        <div class="qualidade-text">
+
+
+            <span>
+                🥇 QUALIDADE EM CADA DETALHE
+            </span>
+
+
+            <h2>
+
+                O segredo está
+
+                <strong>
+                    nos detalhes!
+                </strong>
+
+            </h2>
+
+
+            <p>
+
+                Desde a escolha dos ingredientes
+                até à apresentação final, cuidamos
+                de cada etapa para garantir que
+                receba sempre produtos saborosos
+                e preparados com atenção.
+
+            </p>
+
+
+            <ul class="check-list">
+
+
+                <li>
+
+                    <span class="check">
+                        ✓
+                    </span>
+
+                    Ingredientes selecionados
+
+                </li>
+
+
+                <li>
+
+                    <span class="check">
+                        ✓
+                    </span>
+
+                    Preparação cuidadosa
+
+                </li>
+
+
+                <li>
+
+                    <span class="check">
+                        ✓
+                    </span>
+
+                    Produtos frescos
+
+                </li>
+
+
+                <li>
+
+                    <span class="check">
+                        ✓
+                    </span>
+
+                    Higiene e organização
+
+                </li>
+
+
+                <li>
+
+                    <span class="check">
+                        ✓
+                    </span>
+
+                    Atendimento com carinho
+
+                </li>
+
+
+            </ul>
+
+        </div>
+
+
+
+        <div class="qualidade-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1000&q=90"
+                alt="Preparação de comida"
+            >
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EQUIPA
+===================================================== -->
+
+<section class="equipa">
+
+
+    <div class="section-title">
+
+        <span>
+            👩‍🍳 QUEM FAZ TUDO ACONTECER
+        </span>
+
+
+        <h2>
+
+            A nossa
+
+            <strong>
+                equipa
+            </strong>
+
+        </h2>
+
+
+        <p>
+
+            Por trás de cada produto existe
+            uma equipa apaixonada por aquilo
+            que faz.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="equipa-grid">
+
+
+        <!-- PESSOA 1 -->
+
+        <article class="pessoa">
+
+            <img
+                src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=90"
+                alt="Chef"
+            >
+
+            <h3>
+                Chef Dadiva
+            </h3>
+
+            <p>
+                Fundadora & Chef
+            </p>
+
+        </article>
+
+
+
+        <!-- PESSOA 2 -->
+
+        <article class="pessoa">
+
+            <img
+                src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=800&q=90"
+                alt="Profissional de cozinha"
+            >
+
+            <h3>
+                Equipa de Cozinha
+            </h3>
+
+            <p>
+                Preparação & Qualidade
+            </p>
+
+        </article>
+
+
+
+        <!-- PESSOA 3 -->
+
+        <article class="pessoa">
+
+            <img
+                src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=90"
+                alt="Atendimento do restaurante"
+            >
+
+            <h3>
+                Equipa Dadiva
+            </h3>
+
+            <p>
+                Atendimento & Clientes
+            </p>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BANNER FINAL
+===================================================== -->
+
+<section class="banner">
+
+
+    <h2>
+
+        Venha fazer parte
+
+        <span>
+            da nossa história!
+        </span>
+
+    </h2>
+
+
+    <p>
+
+        Seja para saborear um doce,
+        experimentar um salgado ou fazer
+        uma grande encomenda, estaremos
+        felizes em receber o seu pedido.
+
+    </p>
+
+
+    <a href="index.html#contacto"
+       class="btn-branco">
+
+        ❤️ Fazer uma Encomenda
+
+    </a>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+
+    <div class="footer-logo">
+
+        <span>
+            O Cantinho
+        </span>
+
+        <strong>
+            da Dadiva
+        </strong>
+
+    </div>
+
+
+    <p>
+        Doces, salgados e momentos felizes. ❤️
+    </p>
+
+
+    <div class="social">
+
+        <a href="#">
+            Instagram
+        </a>
+
+        <a href="#">
+            Facebook
+        </a>
+
+        <a href="#">
+            WhatsApp
+        </a>
+
+    </div>
+
+
+    <small>
+
+        © 2026 O Cantinho da Dadiva
+        — Todos os direitos reservados.
+
+    </small>
+
+</small>
+    <P>Feito por: ELVIRA ELIE</P>
+    <p>Contato:922773376</p> 
+    </small>
+
+
+</footer>
+
+</body>
+</html>
